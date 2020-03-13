@@ -1,15 +1,28 @@
-# Project Title
+# Printf
 
 ## About / synopsis
-A short paragraph describing the project / repository
+An implementation of printf created as part of Holberton School Curriculum.
+
+## Authorized functions and macros:
+* write
+* malloc
+* free
+* va_start
+* va_end
+* va_copy
+* va_arg
 
 ## Built With
 
-* [placeholder] - The language / framework / etc used
+* [c] - Betty style formatting
+
+## Built By:
+* Osama Basheer
+* Brett Davis
 
 ### Project contents
 
-| Project Title | Short Description |
+| File Name | Short Description |
 | --- | --- |
 |***|***|
 |***|***|
