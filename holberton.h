@@ -18,4 +18,6 @@ char *rot13(char *s);
 
 char *print_number(int n);
 
+void rev_string(char *s);
+
 #endif
