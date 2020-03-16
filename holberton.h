@@ -16,4 +16,8 @@ char *get_format(const char *format, va_list args);
 
 char *rot13(char *s);
 
+char *print_number(int n);
+
+void rev_string(char *s);
+
 #endif
