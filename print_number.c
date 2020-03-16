@@ -8,7 +8,7 @@
 char *print_number(int n)
 {
 	unsigned int i, j = 1, k = 0;
-	char *buff = _calloc((sizeof(char) * 20), sizeof(char));
+	char *buff = _calloc((sizeof(char) * 21), sizeof(char));
 
 	if (n < 0)
 	{
