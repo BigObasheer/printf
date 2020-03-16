@@ -1,11 +1,10 @@
 #include "holberton.h"
 
-int get_format(const char *format, ...)
+int get_format(const char *format, va_list args)
 {
 	const char *p;
 	unsigned int i;
 	int j;
-	va_list args;
 	char *s;
 
 	if (!format)
@@ -17,7 +16,7 @@ int get_format(const char *format, ...)
 	{
 		if (*p != '%')
 		{
-			_putchar(*p, &k);
+			_putchar(*p;
 			continue;
 		}
 		p++;
@@ -25,34 +24,34 @@ int get_format(const char *format, ...)
 		{
 		case 'c':
 			i = va_arg(args, int);
-			_putchar(i);
+			return(i);
 			break;
 		case 's':
 			s = va_arg(args, char *);
-			_puts(s);
+			return(s);
 			break;
 		case '%':
-			_putchar('%');
+			return('%');
 			break;
 		case 'd':
 			j = va_arg(args, int);
-			_print_number(j);
+			return_print_number(j);
 			break;
 		case 'i':
 			j = va_arg(args, int);
-			_print_number(j);
+			return_print_number(j);
 			break;
 		case 'r':
 			s = va_arg(args, char *);
-			_rev_string(s);
+			return_rev_string(s);
 			break;
 		case 'b':
 			i = va_arg(args, int);
-			_print_binary(i);
+			return_print_binary(i);
 			break;
 		case 'R':
 			s = va_arg(args, char *);
-			_rot13(s);
+			return_rot13(s);
 			break;
 		case '\0':
 			return (-1);
@@ -61,5 +60,4 @@ int get_format(const char *format, ...)
 			_putchar(*p);
 		}
 	}
-	va_end(args);
 }
