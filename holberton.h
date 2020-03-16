@@ -12,6 +12,6 @@ void print_all(const char * const format, ...);
 
 int _strlen(char *s);
 
-int get_format(const char *format, va_list args);
+char *get_format(const char *format, va_list args);
 
 #endif
