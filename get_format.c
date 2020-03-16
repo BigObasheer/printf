@@ -7,57 +7,37 @@ int get_format(const char *format, va_list args)
 	int j;
 	char *s;
 
-	if (!format)
-	{
-		return (-1);
-	}
-	va_start(args, format);
 	for (p = format; *p != '\0'; p++)
 	{
-		if (*p != '%')
-		{
-			_putchar(*p;
-			continue;
-		}
-		p++;
 		switch (*p)
 		{
 		case 'c':
 			i = va_arg(args, int);
-			return(i);
-			break;
+			return (i);
 		case 's':
 			s = va_arg(args, char *);
-			return(s);
-			break;
+			return (s);
 		case '%':
-			return('%');
-			break;
+			return ('%');
 		case 'd':
 			j = va_arg(args, int);
-			return_print_number(j);
-			break;
+			return (print_number(j));
 		case 'i':
 			j = va_arg(args, int);
-			return_print_number(j);
-			break;
+			return (print_number(j));
 		case 'r':
 			s = va_arg(args, char *);
-			return_rev_string(s);
-			break;
+			return (rev_string(s));
 		case 'b':
 			i = va_arg(args, int);
-			return_print_binary(i);
-			break;
+			return (print_binary(i));
 		case 'R':
 			s = va_arg(args, char *);
-			return_rot13(s);
-			break;
+			return (rot13(s));
 		case '\0':
 			return (-1);
 		default:
-			_putchar('%');
-			_putchar(*p);
+			return (*p);
 		}
 	}
 }
