@@ -14,6 +14,7 @@ char *print_number(int n)
 	{
 		n = -n;
 		buff[0] = ('-');
+		k++;
 	}
 	if (n == 0)
 		buff[0] = ('0');
