@@ -1,6 +1,6 @@
 #include "holberton.h"
 
-int _printf(const char *format, ...)
+int get_format(const char *format, ...)
 {
 	const char *p;
 	unsigned int i;
