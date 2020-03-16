@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include "holberton.h"
 #include <unistd.h>
+#include <stdio.h>
 
 void _strcpy(char *dest, char *src);
 /**
