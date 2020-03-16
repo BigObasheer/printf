@@ -5,18 +5,18 @@
  * @n: number
  * Return: void
  */
-
-void print_number(int n)
+char *print_number(int n)
 {
-	unsigned int i, j = 1;
+	unsigned int i, j = 1, k = 0;
+	char *buff = _calloc((sizeof(char) * 20), sizeof(char));
 
 	if (n < 0)
 	{
 		n = -n;
-		_putchar('-');
+		buff[0] = ('-');
 	}
 	if (n == 0)
-		_putchar('0');
+		buff[0] = ('0');
 	else
 	{
 		i = n;
@@ -27,9 +27,11 @@ void print_number(int n)
 		}
 		while (j >= 1)
 		{
-			_putchar((n / j) + '0');
+			buff[k] = ((n / j) + '0');
 			n = n % j;
 			j = j / 10;
+			k++;
 		}
 	}
+	return (buff);
 }
