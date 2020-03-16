@@ -12,8 +12,8 @@ int get_format(const char *format, va_list args)
 		switch (*p)
 		{
 		case 'c':
-			i = va_arg(args, int);
-			return (i);
+			s = va_arg(args, int);
+			return (s);
 		case 's':
 			s = va_arg(args, char *);
 			return (s);
@@ -39,5 +39,6 @@ int get_format(const char *format, va_list args)
 		default:
 			return (*p);
 		}
+		return (-1);
 	}
 }
