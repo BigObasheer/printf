@@ -14,9 +14,8 @@ int _printf(const char *format, ...)
 {
 	unsigned int i, j;
 	char *buff = _calloc(sizeof(char) * 1024, sizeof(char));
-	/*char *tmp; --var not in use yet*/
+	char *tmp; --var not in use yet*/
 	va_list args;
-	char *test = "placeholder";
 
 	i = j = 0;
 	va_start(args, format);
@@ -28,8 +27,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			/*char *tmp = get_type(*(format + i));*/
-			_strcpy(buff + j, test);
+			char *tmp = get_type(*(format + i));
+			_strcpy(buff + j, tmp);
 			j += _strlen(test);
 			i++; /*replace later with dynamic check*/
 		}
