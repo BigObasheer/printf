@@ -1,7 +1,6 @@
 #include <stdlib.h>
-#include <stdarg.h>
 #include "holberton.h"
-#include <stdio.h>
+#include <unistd.h>
 
 void _strcpy(char *dest, char *src);
 /**
@@ -14,7 +13,7 @@ int _printf(const char *format, ...)
 {
 	unsigned int i, j;
 	char *buff = _calloc(sizeof(char) * 1024, sizeof(char));
-	char *tmp; --var not in use yet*/
+	char *tmp;
 	va_list args;
 
 	i = j = 0;
@@ -27,9 +26,9 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			char *tmp = get_format(*(format + i), args);
+			tmp = get_format(format + i, args);
 			_strcpy(buff + j, tmp);
-			j += _strlen(test);
+			j += _strlen(tmp);
 			i++; /*replace later with dynamic check*/
 		}
 	}
