@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			char *tmp = get_type(*(format + i));
+			char *tmp = get_format(*(format + i), args);
 			_strcpy(buff + j, tmp);
 			j += _strlen(test);
 			i++; /*replace later with dynamic check*/
