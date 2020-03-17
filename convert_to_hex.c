@@ -15,11 +15,13 @@ char *convert_to_hex(va_list args)
 
 	buff = _calloc(sizeof(char) * 1024, sizeof(char));
 
-	/*if (args);
-	  {
-	  buff[0] = '0';
-	  buff[1] = 'x';
-	  }*/
+	/*
+	 *if (args);
+	 * {
+	 * buff[0] = '0';
+	 * buff[1] = 'x';
+	 * }
+	 */
 	for (i = 0; num != 0;)
 	{
 		tmp = num % 16;
