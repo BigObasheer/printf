@@ -8,9 +8,9 @@ char *_rev_string(char *s);
  */
 char *convert_to_binary(va_list args)
 {
-	int num = va_arg(args, int);
+	unsigned int num = va_arg(args, unsigned int);
 	char *buff;
-	int i = 0, tmp = num;
+	int i = 0;
 
 	buff = _calloc(sizeof(char) * 1024, sizeof(char));
 	for (; num > 0; i++)
@@ -18,10 +18,6 @@ char *convert_to_binary(va_list args)
 		buff[i] = (num % 2) + '0';
 		num = num / 2;
 	}
-	if (tmp < 0)
-		buff[i] = '1';
-	else
-		buff[i] = '0';
 	return (_rev_string(buff));
 }
 /**
