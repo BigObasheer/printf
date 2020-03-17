@@ -28,8 +28,11 @@ int _printf(const char *format, ...)
 		else
 		{
 			tmp = get_format(format + i, args);
-			_strcpy(buff + j, tmp);
-			j += _strlen(tmp) - 1;
+			if (tmp != NULL)
+			{
+				_strcpy(buff + j, tmp);
+				j += _strlen(tmp) - 1;
+			}
 			i++; /*replace later with dynamic check*/
 		}
 	}

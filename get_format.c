@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 #define NULL ((void *)0)
 char *ret_str(va_list args);
 char *char_to_str(va_list args);
@@ -29,7 +30,7 @@ char *get_format(const char *format, va_list args)
 		return (NULL);
 	p = format;
 	p++;
-	for (i = 0; form[i].spec; i++)
+	for (i = 0; form[i].spec != '\0'; i++)
 	{
 		if (form[i].spec == *p)
 		{
