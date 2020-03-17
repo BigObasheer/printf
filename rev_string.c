@@ -6,8 +6,9 @@
  * Return: void
  */
 
-char *rev_string(char *s)
+char *rev_string(va_list args)
 {
+	char *s = va_arg(args, char *);
 	int start = 0, end, temp;
 	char *buff;
 
