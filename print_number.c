@@ -5,8 +5,9 @@
  * @n: number
  * Return: void
  */
-char *print_number(int n)
+char *print_number(va_list args)
 {
+	int n = va_arg(args, int);
 	unsigned int i, j = 1, k = 0;
 	char *buff = _calloc((sizeof(char) * 21), sizeof(char));
 
