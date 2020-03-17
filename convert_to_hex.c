@@ -8,6 +8,7 @@
 
 char *convert_to_hex(va_list args)
 {
+	int num = va_arg(args, int);
 	char *buff;
 	int i, tmp = 0;
 	int j;
@@ -15,13 +16,13 @@ char *convert_to_hex(va_list args)
 	buff = _calloc(sizeof(char) * 1024, sizeof(char));
 
 	/*if (args);
+	  {
+	  buff[0] = '0';
+	  buff[1] = 'x';
+	  }*/
+	for (i = 0; num != 0;)
 	{
-		buff[0] = '0';
-		buff[1] = 'x';
-	}*/
-	for (i = 0; args != 0;)
-	{
-		tmp = args % 16;
+		tmp = num % 16;
 		if (tmp < 10)
 		{
 			buff[i] = tmp + 48;
@@ -32,6 +33,7 @@ char *convert_to_hex(va_list args)
 			buff[i] = tmp + 55;
 			i++;
 		}
+		num = num / 16;
 	}
 	for (j = i - 1; j > 0; j--)
 	{
