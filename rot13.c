@@ -7,8 +7,9 @@
  * Return: rot13 encoded string
  */
 
-char *rot13(char *s)
+char *rot13(va_list args)
 {
+	char *s = va_arg(args, char *);
 	int i, j, len;
 	char lett[60] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot[60] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
