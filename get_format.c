@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #define NULL ((void *)0)
+char *ret_perc(va_list args);
 char *ret_str(va_list args);
 char *char_to_str(va_list args);
 /**
@@ -20,7 +21,7 @@ char *get_format(const char *format, va_list args)
 		{'i', print_number},
 		{'c', char_to_str},
 		{'s', ret_str},
-		{'%', char_to_str},
+		{'%', ret_perc},
 		{'r', rev_string},
 		{'R', rot13},
 		{'b', convert_to_binary},
@@ -64,5 +65,11 @@ char *char_to_str(va_list args)
 	char *s = _calloc(sizeof(char) * 2, sizeof(char));
 
 	s[0] = a;
+	return (s);
+}
+char *ret_perc(va_list args __attribute__((unused)))
+{
+	char *s = "%";
+
 	return (s);
 }
