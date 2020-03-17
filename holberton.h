@@ -20,4 +20,6 @@ char *print_number(int n);
 
 char *rev_string(char *s);
 
+char *convert_to_binary(int num);
+
 #endif
