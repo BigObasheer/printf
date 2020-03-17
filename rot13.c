@@ -2,7 +2,7 @@
 
 /**
  * rot13 - function that encodes a string using rot13
- * @s: string
+ * @args: va_list containing string s
  *
  * Return: rot13 encoded string
  */
