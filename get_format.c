@@ -15,10 +15,10 @@ char *get_format(const char *format, va_list args)
 	unsigned int i;
 	char *s = _calloc(sizeof(char) * 1024, sizeof(char));
 	convs_t form[] = {
-		{'d', &print_number},
-		{'i', &print_number},
+		{'d', print_number},
+		{'i', print_number},
 		{'c', char_to_str},
-	        {'s', ret_str},
+		{'s', ret_str},
 		{'%', char_to_str},
 		{'r', rev_string},
 		{'R', rot13},
@@ -48,6 +48,7 @@ char *get_format(const char *format, va_list args)
 char *ret_str(va_list args)
 {
 	char *s = va_arg(args, char *);
+
 	return (s);
 }
 /**

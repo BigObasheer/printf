@@ -3,7 +3,7 @@
 char *_rev_string(char *s);
 /**
  * convert_to_binary - converts an int to binary
- * @num: number to convert in decimal
+ * @args: va_list containing number to convert in decimal
  * Return: char * of converted int
  */
 char *convert_to_binary(va_list args)
