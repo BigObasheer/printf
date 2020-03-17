@@ -20,8 +20,6 @@ char *convert_to_binary(va_list args)
 	}
 	if (tmp < 0)
 		buff[i] = '1';
-	else
-		buff[i] = '0';
 	return (_rev_string(buff));
 }
 /**
