@@ -17,6 +17,15 @@ int _printf(const char *format, ...)
 	char *tmp;
 	va_list args;
 
+	if (buff == NULL)
+	{
+		return (-1);
+	}
+	if (format == NULL)
+	{
+		free (buff);
+		return (-1);
+	}
 	i = j = 0;
 	va_start(args, format);
 	for (i = 0, j = 0; format[i]; i++, j++)
@@ -33,6 +42,8 @@ int _printf(const char *format, ...)
 				_strcpy(buff + j, tmp);
 				j += _strlen(tmp) - 1;
 			}
+			else
+				buff[j++] = '\0';
 			i++; /*replace later with dynamic check*/
 		}
 	}
