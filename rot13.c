@@ -9,18 +9,21 @@
 
 char *rot13(char *s)
 {
-	int i, j;
-	char *letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char *rot = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i, j, len;
+	char lett[60] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot[60] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *buff;
 
-	for (i = 0; s[i] != 0; i++)
+	len = _strlen(s);
+	buff = _calloc(sizeof(char) * len, sizeof(char));
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; letters[j] != '\0'; j++)
-			if (s[i] == letters[j])
+		for (j = 0; lett[j] != '\0'; j++)
+			if (s[i] == lett[j])
 			{
-				s[i] = rot[j];
+				buff[i] = rot[j];
 				break;
 			}
 	}
-	return (s);
+	return (buff);
 }
