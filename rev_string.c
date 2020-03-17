@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * rev_string - function that reverses a string
- * @s: string
+ * @args: va_list with string s
  * Return: void
  */
 

@@ -5,14 +5,14 @@ typedef char *(*operation)(va_list args);
 /**
  * struct convs - info on conversion cases and the address of the correct func
  * @spec: format specifier
- * @addr: Address of correct function
+ * @f: Address of correct function
  *
  */
 typedef struct convs
 {
 	char spec;
 	operation f;
-}convs_t;
+} convs_t;
 
 int _putchar(char c);
 

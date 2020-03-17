@@ -2,7 +2,7 @@
 
 /**
  * print_number - prints number using putchar
- * @n: number
+ * @args: va_list with num n
  * Return: void
  */
 char *print_number(va_list args)
