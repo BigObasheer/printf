@@ -67,6 +67,12 @@ char *char_to_str(va_list args)
 	s[0] = a;
 	return (s);
 }
+/**
+ * ret_perc - returns % as a string
+ * @args: contains the va_list holding the args
+ *
+ * Return: string
+ */
 char *ret_perc(va_list args __attribute__((unused)))
 {
 	char *s = "%";
