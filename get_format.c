@@ -51,6 +51,8 @@ char *ret_str(va_list args)
 {
 	char *s = va_arg(args, char *);
 
+	if (s == NULL)
+		s = "(null)";
 	return (s);
 }
 /**
