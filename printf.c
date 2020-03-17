@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 		}
 	}
 	buff[j] = '\0';
-	write('\0', buff, j);
+	write(1, buff, j);
 	return (j);
 }
 /**
