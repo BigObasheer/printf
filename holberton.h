@@ -18,6 +18,8 @@ char *rot13(char *s);
 
 char *print_number(int n);
 
-void rev_string(char *s);
+char *rev_string(char *s);
+
+char *convert_to_binary(int num);
 
 #endif

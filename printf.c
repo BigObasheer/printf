@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 		{
 			tmp = get_format(format + i, args);
 			_strcpy(buff + j, tmp);
-			j += _strlen(tmp);
+			j += _strlen(tmp) - 1;
 			i++; /*replace later with dynamic check*/
 		}
 	}
