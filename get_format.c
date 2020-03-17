@@ -1,5 +1,12 @@
 #include "holberton.h"
 #define NULL ((void *)0)
+
+/**
+ * get_format - format specifier for print f
+ * @format
+ * Return: string
+ */
+
 char *get_format(const char *format, va_list args)
 {
 	const char *p;
