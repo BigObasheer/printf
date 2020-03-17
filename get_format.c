@@ -10,47 +10,31 @@
 char *get_format(const char *format, va_list args)
 {
 	const char *p;
-	/*unsigned int i;*/
-	int j;
+	unsigned int i;
 	char *s = _calloc(sizeof(char) * 1024, sizeof(char));
-	char a = '\0';
-
+	/* char a = '\0';*/
+	convs_t form[] = {
+		{'d', &print_number},
+		{'i', &print_number},
+		/*{'c', char_to_str},
+		  {'s', ret_str},
+		  {'%', ret_perc},
+		{'r', rev_string},
+		{'R', rot13},
+		{'b', convert_to_binary},*/
+		{'\0', NULL}
+	};
 	if (s == NULL)
 		return (NULL);
 	p = format;
 	p++;
-	switch (*p)
+	for (i = 0; form[i].spec; i++)
 	{
-	case 'c':
-		a = va_arg(args, int);
-		s[0] = a;
-		return (s);
-	case 's':
-		s = va_arg(args, char *);
-		return (s);
-	case '%':
-		s = "%";
-		return (s);
-		j = va_arg(args, int);
-		return (print_number(j));
-	case 'i':
-		j = va_arg(args, int);
-		return (print_number(j));
-	case 'r':
-		s = va_arg(args, char *);
-		return (rev_string(s));
-		/*
-		 *case 'b':
-		 *i = va_arg(args, int);
-		 *return (print_binary(i));
-		 */
-	case 'R':
-		s = va_arg(args, char *);
-		return (rot13(s));
-	case '\0':
-		return (s);
-	default:
-		return (s);
+		if (form[i].spec == *p)
+		{
+			s = form[i].f(args);
+			return (s);
+		}
 	}
-	return (s);
+	return (NULL);
 }
