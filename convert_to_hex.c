@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * convert_to-hex - convert number to hex
- * @n: the number to convert in decimal
+ * convert_to_hex - convert number to hex
+ * @args: the number to convert in decimal
  * Return: char * of converted int
  */
 
@@ -37,7 +37,7 @@ char *convert_to_hex(va_list args)
 	}
 	for (j = i - 1; j > 0; j--)
 	{
-		buff [j] = buff [i];
+		buff[j] = buff[i];
 	}
 	return (buff);
 }
