@@ -1,5 +1,6 @@
 #include "holberton.h"
 #define NULL ((void *)0)
+<<<<<<< HEAD
 char *ret_str(va_list args);
 char *char_to_str(va_list args);
 /**
