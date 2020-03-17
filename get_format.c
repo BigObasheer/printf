@@ -1,12 +1,11 @@
 #include "holberton.h"
 #define NULL ((void *)0)
-<<<<<<< HEAD
 char *ret_str(va_list args);
 char *char_to_str(va_list args);
 /**
  * get_format - finds the format specifier and performs an action
- * format: contains a pointer to the format specifier
- * args: contains the va_list holding the args
+ * @format: contains a pointer to the format specifier
+ * @args: contains the va_list holding the args
  *
  * Return: formatted string
  */
