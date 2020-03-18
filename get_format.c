@@ -25,6 +25,7 @@ char *get_format(const char *format, va_list args)
 		{'r', rev_string},
 		{'R', rot13},
 		{'b', convert_to_binary},
+		{'X', convert_to_hex},
 		{'\0', NULL}
 	};
 	if (s == NULL)
