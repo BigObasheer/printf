@@ -35,3 +35,26 @@ An implementation of printf created as part of Holberton School Curriculum.
 |printf.c|Prints a formatted buffer of vriable arguments and types|
 |rev_string|Function that reverses a string|
 |rot13|Function that encodes a string using rot13|
+
+### Example program for Printf.c
+
+#include <stdio.h>
+int main()
+{
+   char ch = 'H';
+   char str[10] = "Holberton";
+   int n = 150;
+   printf("Character is %c \n", ch);
+   printf("String is %s \n" , str);
+   printf("Integer value is %d\n" , n);
+   printf("Octal value is %o \n", n);
+   printf("Hexadecimal value is %x \n", n);
+   return 0;
+}
+
+#### Output
+Character is H
+String is Holberton
+Integer value is 150
+Octal value is 226
+Hexadecimal value is 96
