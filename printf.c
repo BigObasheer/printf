@@ -5,7 +5,7 @@
 
 void _strcpy(char *dest, char *src);
 /**
- * _printf - prints a formatted buffer of vriable arguments and types
+ * _printf - prints a formatted buffer of variable arguments and types
  * @format: String literal containing % before format specifier
  *
  * Return: Number of chars printed
