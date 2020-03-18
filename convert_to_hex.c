@@ -37,7 +37,7 @@ char *convert_to_hex(va_list args)
 		}
 		num = num / 16;
 	}
-	for (j = i - 1; j > 0; j--)
+	for (j = i - 1; j >= 0; j--)
 	{
 		buff[j] = buff[i];
 	}
