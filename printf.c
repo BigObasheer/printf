@@ -39,8 +39,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '\0' || (format[i + 1] == ' ' &&
 						      format[i + 2] == '\0'))
 			{
-				buff[j] = format[i];
-				continue;
+				return (-1);
 			}
 			tmp = get_format(format + i, args);
 			if (tmp != NULL)
