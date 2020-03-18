@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+#include <stdlib.h>
 char *_rev_string(char *s);
 /**
  * convert_to_binary - converts an int to binary
@@ -13,9 +13,12 @@ char *convert_to_binary(va_list args)
 	int i = 0;
 
 	buff = _calloc(sizeof(char) * 1024, sizeof(char));
-	if (!num)
-	{
+	if (buff == NULL)
 		return (NULL);
+	if (num == 0)
+	{
+		free(buff);
+		return ("0");
 	}
 	for (; num > 0; i++)
 	{
