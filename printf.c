@@ -50,6 +50,8 @@ int _printf(const char *format, ...)
 				{
 					j++;
 				}
+				if (format[i + 1] != 's')
+					free(tmp);
 			}
 			else
 			{
