@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
  * convert_to_hex - convert number to hex
@@ -8,20 +9,19 @@
 
 char *convert_to_hex(va_list args)
 {
-	int num = va_arg(args, int);
+	unsigned int num = va_arg(args, unsigned int);
 	char *buff;
 	int i, tmp = 0;
 	int j;
 
 	buff = _calloc(sizeof(char) * 1024, sizeof(char));
-
-	/*
-	 *if (args);
-	 * {
-	 * buff[0] = '0';
-	 * buff[1] = 'x';
-	 * }
-	 */
+	if (buff == NULL)
+		return (NULL);
+	if (num == 0)
+	{
+		free(buff);
+		return ("0");
+	}
 	for (i = 0; num != 0;)
 	{
 		tmp = num % 16;
