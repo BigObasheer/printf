@@ -1,4 +1,4 @@
-# Printf
+# _printf
 
 ## About / synopsis
 An implementation of printf created as part of Holberton School Curriculum.
@@ -38,7 +38,7 @@ An implementation of printf created as part of Holberton School Curriculum.
 
 ### Example program for Printf.c
 
-#include <stdio.h>
+#include "holberton.h"
 
 int main()
 
@@ -50,15 +50,15 @@ int main()
 
    int n = 150;
 
-   printf("Character is %c \n", ch);
+   _printf("Character is %c \n", ch);
 
-   printf("String is %s \n" , str);
+   _printf("String is %s \n" , str);
 
-   printf("Integer value is %d\n" , n);
+   _printf("Integer value is %d\n" , n);
 
-   printf("Octal value is %o \n", n);
+   _printf("Octal value is %o \n", n);
 
-   printf("Hexadecimal value is %x \n", n);
+   _printf("Hexadecimal value is %x \n", n);
 
    return 0;
 
