@@ -12,6 +12,10 @@ char *rev_string(va_list args)
 	int start = 0, end, temp;
 	char *buff;
 
+	if (s = NULL)
+	{
+		return (NULL);
+	}
 	end = (_strlen(s) - 1);
 	buff = _calloc(sizeof(char) * (end + 1), sizeof(char));
 	while (start <= end)
