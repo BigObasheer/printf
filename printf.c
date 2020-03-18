@@ -52,7 +52,10 @@ int _printf(const char *format, ...)
 				}
 			}
 			else
-				buff[j] = '\0';
+			{
+				buff[j++] = format[i];
+				buff[j] = format[i + 1];
+			}
 			i++; /*replace later with dynamic check*/
 		}
 	}
