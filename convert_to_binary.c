@@ -13,6 +13,10 @@ char *convert_to_binary(va_list args)
 	int i = 0;
 
 	buff = _calloc(sizeof(char) * 1024, sizeof(char));
+	if (!num)
+	{
+		return (NULL);
+	}
 	for (; num > 0; i++)
 	{
 		buff[i] = (num % 2) + '0';
