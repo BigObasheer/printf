@@ -15,8 +15,16 @@ char *rot13(va_list args)
 	char rot[60] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char *buff;
 
+	if (s == NULL)
+	{
+		return (NULL);
+	}
 	len = _strlen(s);
 	buff = _calloc(sizeof(char) * len, sizeof(char));
+	if (buff == NULL)
+	{
+		return (NULL):
+	}
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; lett[j] != '\0'; j++)
