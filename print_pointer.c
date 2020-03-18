@@ -13,6 +13,10 @@ char *print_pointer(va_list args)
 	char *buff = _calloc(sizeof(char) * 20, sizeof(char));
 	int i, j;
 
+	if (tmp == NULL)
+		return (NULL);
+	if (buff == NULL)
+		return (NULL);
 	buff[0] = '0';
 	buff[1] = 'x';
 	for (i = 0, j = 2; tmp[i]; i++, j++)
