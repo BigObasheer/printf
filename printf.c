@@ -46,9 +46,13 @@ int _printf(const char *format, ...)
 			{
 				_strcpy(buff + j, tmp);
 				j += _strlen(tmp) - 1;
+				if (format[i + 1] == 'c' && tmp[0] == '\0')
+				{
+					j++;
+				}
 			}
 			else
-				buff[j++] = '\0';
+				buff[j] = '\0';
 			i++; /*replace later with dynamic check*/
 		}
 	}
@@ -69,8 +73,7 @@ void _strcpy(char *dest, char *src)
 
 	for (; src[i]; i++)
 	{
-		if (src[i] != '\0')
+		if (src[i])
 			dest[i] = src[i];
-
 	}
 }
