@@ -23,7 +23,7 @@ char *rot13(va_list args)
 	buff = _calloc(sizeof(char) * len, sizeof(char));
 	if (buff == NULL)
 	{
-		return (NULL):
+		return (NULL);
 	}
 	for (i = 0; s[i] != '\0'; i++)
 	{
