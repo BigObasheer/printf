@@ -39,7 +39,10 @@ char *convert_to_hex(va_list args)
 	}
 	for (j = i - 1; j > 0; j--)
 	{
+		tmp = buff[j];
 		buff[j] = buff[i];
+		buff[i] = tmp;
+		i++;
 	}
 	return (buff);
 }
