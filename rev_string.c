@@ -12,7 +12,7 @@ char *rev_string(va_list args)
 	int start = 0, end, temp;
 	char *buff;
 
-	if (s = NULL)
+	if (s == NULL)
 	{
 		return (NULL);
 	}
