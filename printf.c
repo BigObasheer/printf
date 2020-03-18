@@ -61,6 +61,7 @@ int _printf(const char *format, ...)
 	}
 	buff[j] = '\0';
 	write(1, buff, j);
+	free(buff);
 	return (j);
 }
 /**
