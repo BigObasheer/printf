@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * convert_to_oct - convert number to oct
  * @args: the number to convert in decimal
@@ -11,7 +11,7 @@ char *convert_to_oct(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
 	char *buff;
-	int i, result, dig, temp;
+	int i = 0, temp, j;
 
 	buff = _calloc(sizeof(char) * 1024, sizeof(char));
 	if (buff == NULL)
@@ -19,21 +19,23 @@ char *convert_to_oct(va_list args)
 	if (num == 0)
 	{
 		free(buff);
-		return ("0");
+		return (NULL);
 	}
 	while (num)
 	{
-		result += (num % 8) * dig;
-		dig /= 8;
-		dig *= 10;
+		buff[i] = (num % 8) + '0';
+		num /= 8;
 		i++;
 	}
-	temp = i;
-	dig /= 10;
-	for (i = 0 ; i < temp; i++)
+	i--;
+	j = 0;
+	while (j <= i)
 	{
-		buff[i] = ((result / dig) % 10) + '0';
-		dig /= 10;
+		temp = buff[j];
+		buff[j] = buff[i];
+		buff[i] = temp;
+		i--;
+		j++;
 	}
 	return (buff);
 }

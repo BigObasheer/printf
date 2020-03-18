@@ -18,6 +18,8 @@ char *rev_string(va_list args)
 	}
 	end = (_strlen(s) - 1);
 	buff = _calloc(sizeof(char) * (end + 1), sizeof(char));
+	if (buff == NULL)
+		return (NULL);
 	while (start <= end)
 	{
 		temp = s[start];
