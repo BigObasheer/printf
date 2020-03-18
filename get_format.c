@@ -15,6 +15,7 @@ char *get_format(const char *format, va_list args)
 {
 	const char *p;
 	unsigned int i;
+	char *s = _calloc(sizeof(char) * 1024, sizeof(char));
 	convs_t form[] = {
 		{'d', print_number},
 		{'i', print_number},
@@ -30,13 +31,16 @@ char *get_format(const char *format, va_list args)
 		{'p', print_pointer},
 		{'\0', NULL}
 	};
+	if (s == NULL)
+		return (NULL);
 	p = format;
 	p++;
 	for (i = 0; form[i].spec != '\0'; i++)
 	{
 		if (form[i].spec == *p)
 		{
-			return (form[i].f(args));
+			s = form[i].f(args);
+			return (s);
 		}
 	}
 	return (NULL);
@@ -81,8 +85,7 @@ char *char_to_str(va_list args)
  */
 char *ret_perc(va_list args __attribute__((unused)))
 {
-	char *s = _calloc(sizeof(char) * 2, sizeof(char));
+	char *s = "%";
 
-	s[0] = '%';
 	return (s);
 }

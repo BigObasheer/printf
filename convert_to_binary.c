@@ -48,6 +48,5 @@ char *_rev_string(char *s)
 		start++;
 		end--;
 	}
-	free(s);
 	return (buff);
 }

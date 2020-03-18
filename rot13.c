@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * rot13 - function that encodes a string using rot13
@@ -11,17 +11,17 @@
 char *rot13(va_list args)
 {
 	char *s = va_arg(args, char *);
-	int i, j;
+	int i, j, len;
 	char lett[60] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot[60] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	char *buff = _calloc(sizeof(char) * 1024, sizeof(char));
+	char *buff;
 
 	if (s == NULL)
 	{
-		if (buff != NULL)
-			free(buff);
 		return (NULL);
 	}
+	len = _strlen(s);
+	buff = _calloc(sizeof(char) * len, sizeof(char));
 	if (buff == NULL)
 	{
 		return (NULL);
