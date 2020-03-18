@@ -37,12 +37,12 @@ char *convert_to_hex(va_list args)
 		}
 		num = num / 16;
 	}
-	for (j = i - 1; j >= 0; j--)
+	i--;
+	for (j = 0; j <= i; j++, i--)
 	{
 		tmp = buff[j];
 		buff[j] = buff[i];
 		buff[i] = tmp;
-		i++;
 	}
 	return (buff);
 }

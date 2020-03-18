@@ -36,4 +36,5 @@ char *convert_to_binary(va_list args);
 
 char *convert_to_hex(va_list args);
 
+char *convert_to_oct(va_list args);
 #endif
