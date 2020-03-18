@@ -35,8 +35,6 @@ Options are determined by formatting specifier following special char '%' in
 %u - Specifies the relative argument is an unsigned int
 
 %p - Specifies the relative argument is a pointer
-
-%S - **PLACEHOLDER**
 .SH SEE ALSO
 .I printf(3)
 .SH BUGS
