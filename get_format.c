@@ -70,6 +70,10 @@ char *char_to_str(va_list args)
 	char a = va_arg(args, int);
 	char *s = _calloc(sizeof(char) * 2, sizeof(char));
 
+	if (s == NULL)
+	{
+		return (NULL);
+	}
 	s[0] = a;
 	return (s);
 }
