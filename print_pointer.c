@@ -14,21 +14,13 @@ char *print_pointer(va_list args)
 	int i, j;
 
 	if (tmp == NULL)
-	{
-		if (buff != NULL)
-			free(buff);
 		return (NULL);
-	}
 	if (buff == NULL)
-	{
-		free(tmp);
 		return (NULL);
-	}
 	buff[0] = '0';
 	buff[1] = 'x';
 	for (i = 0, j = 2; tmp[i]; i++, j++)
 		buff[j] = tmp[i];
-	free(tmp);
 	return (buff);
 }
 /**
