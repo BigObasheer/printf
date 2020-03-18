@@ -50,14 +50,21 @@ int _printf(const char *format, ...)
 				{
 					j++;
 				}
+				if (format[i + 1] != 's' ||
+				    format[i + 1] == 'R')
+					free(tmp);
 			}
 			else
-				buff[j] = '\0';
+			{
+				buff[j++] = format[i];
+				buff[j] = format[i + 1];
+			}
 			i++; /*replace later with dynamic check*/
 		}
 	}
 	buff[j] = '\0';
 	write(1, buff, j);
+	free(buff);
 	return (j);
 }
 /**

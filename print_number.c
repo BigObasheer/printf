@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdlib.h>
 /**
  * print_number - prints number using putchar
  * @args: va_list with num n
@@ -11,6 +11,8 @@ char *print_number(va_list args)
 	unsigned int i, j = 1, k = 0;
 	char *buff = _calloc((sizeof(char) * 21), sizeof(char));
 
+	if (buff == NULL)
+		return (NULL);
 	if (n < 0)
 	{
 		n = -n;
@@ -18,7 +20,10 @@ char *print_number(va_list args)
 		k++;
 	}
 	if (n == 0)
-		buff[0] = ('0');
+	{
+		free(buff);
+		return ("0");
+	}
 	else
 	{
 		i = n;
