@@ -50,7 +50,8 @@ int _printf(const char *format, ...)
 				{
 					j++;
 				}
-				if (format[i + 1] != 's')
+				if (format[i + 1] != 's' ||
+				    format[i + 1] == 'R')
 					free(tmp);
 			}
 			else
