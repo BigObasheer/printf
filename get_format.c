@@ -29,6 +29,7 @@ char *get_format(const char *format, va_list args)
 		{'x', convert_to_hex_low},
 		{'o', convert_to_oct},
 		{'p', print_pointer},
+		{'u', print_unumber},
 		{'\0', NULL}
 	};
 	if (s == NULL)

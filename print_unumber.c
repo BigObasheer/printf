@@ -1,22 +1,17 @@
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
- * print_number - prints number to buffer
+ * print_unumber - prints unsigned number
  * @args: va_list with num n
  * Return: void
  */
-char *print_number(va_list args)
+char *print_unumber(va_list args)
 {
-	int n = va_arg(args, int);
+	unsigned int n = va_arg(args, unsigned int);
 	unsigned int i, j = 1, k = 0;
 	char *buff = _calloc((sizeof(char) * 21), sizeof(char));
 
-	if (n < 0)
-	{
-		n = -n;
-		buff[0] = ('-');
-		k++;
-	}
 	if (n == 0)
 		buff[0] = ('0');
 	else
