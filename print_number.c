@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * print_number - prints number using putchar
+ * print_number - prints number to buffer
  * @args: va_list with num n
  * Return: void
  */
