@@ -6,13 +6,13 @@ _printf
 int _printf(const char *format, ...)
 .SH DESCRIPTION
 The _printf function produces output according to a 
-%I format
+.I format
 as described in the following section. The _printf function writes a string along with the options included converted to type char * to stdout. The character(s) following char '%' in 
-%I format
+.I format
 specifies how the relative argument is converted to char *.
 .SH OPTIONS
 Options are determined by formatting specifier following special char '%' in 
-%I format
+.I format
 . The following flags are considered valid:
 %c - Specifies the relative argument is a char
 
